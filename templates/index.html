@@ -548,7 +548,7 @@ let chart;
 
 // ---------------- SOCKET ----------------
 const socket = io(
-  "https://stock-predictor1-0jp0.onrender.com"
+  " https://stock-predictor1-0jp0.onrender.com"
 );
 
 socket.on(
@@ -631,7 +631,7 @@ async function registerUser() {
 
   let response = await fetch(
 
-    "https://stock-predictor1-0jp0.onrender.com",
+    "https://stock-predictor1-0jp0.onrender.com/register",
 
     {
 
@@ -675,7 +675,7 @@ async function loginUser() {
 
   let response = await fetch(
 
-    "https://stock-predictor1-0jp0.onrender.com",
+    "https://stock-predictor1-0jp0.onrender.com/login",
 
     {
 
