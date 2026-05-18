@@ -548,7 +548,7 @@ let chart;
 
 // ---------------- SOCKET ----------------
 const socket = io(
-  "http://127.0.0.1:5000"
+  "https://stock-predictor1-0jp0.onrender.com"
 );
 
 socket.on(
@@ -631,7 +631,7 @@ async function registerUser() {
 
   let response = await fetch(
 
-    "http://127.0.0.1:5000/register",
+    "https://stock-predictor1-0jp0.onrender.com",
 
     {
 
@@ -675,7 +675,7 @@ async function loginUser() {
 
   let response = await fetch(
 
-    "http://127.0.0.1:5000/login",
+    "https://stock-predictor1-0jp0.onrender.com",
 
     {
 
@@ -732,7 +732,7 @@ async function predict() {
 
   let response = await fetch(
 
-    "http://127.0.0.1:5000/predict?stock=" +
+    "https://stock-predictor1-0jp0.onrender.com/predict?stock=" +
 
     stock
   );
@@ -1030,7 +1030,7 @@ async function predict() {
 async function loadMarket() {
 
   let response = await fetch(
-    "http://127.0.0.1:5000/market"
+    "https://stock-predictor1-0jp0.onrender.com/market-movers"
   );
 
   let data = await response.json();
@@ -1101,7 +1101,7 @@ async function addPortfolio() {
 
   await fetch(
 
-    "http://127.0.0.1:5000/add",
+    "https://stock-predictor1-0jp0.onrender.com/add",
 
     {
 
@@ -1127,7 +1127,7 @@ async function addPortfolio() {
 async function loadPortfolio() {
 
   let response = await fetch(
-    "http://127.0.0.1:5000/portfolio"
+    "https://stock-predictor1-0jp0.onrender.com/portfolio"
   );
 
   let data = await response.json();
@@ -1178,7 +1178,7 @@ async function loadPaperPortfolio() {
 
   let response = await fetch(
 
-    "http://127.0.0.1:5000/paper-portfolio"
+    "https://stock-predictor1-0jp0.onrender.com/paper-portfolio"
   );
 
   let data = await response.json();
@@ -1246,7 +1246,7 @@ async function paperBuy() {
 
   await fetch(
 
-    "http://127.0.0.1:5000/paper-buy",
+    "https://stock-predictor1-0jp0.onrender.com/paper-buy",
 
     {
 
@@ -1284,7 +1284,7 @@ async function paperSell() {
 
   await fetch(
 
-    "http://127.0.0.1:5000/paper-sell",
+    "https://stock-predictor1-0jp0.onrender.com/paper-sell",
 
     {
 
@@ -1337,7 +1337,7 @@ async function sendChat() {
 
     let response = await fetch(
 
-        "http://127.0.0.1:5000/chat?stock=" +
+        "https://stock-predictor1-0jp0.onrender.com/chat?stock=" +
 
         stock
     );
