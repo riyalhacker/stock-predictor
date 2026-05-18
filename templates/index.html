@@ -547,9 +547,11 @@
 let chart;
 
 // ---------------- SOCKET ----------------
-const socket = io(
-  " https://stock-predictor1-0jp0.onrender.com"
-);
+// Variable to store your backend address
+const BACKEND_URL = "https://stock-predictor1-0jp0.onrender.com";
+
+// Initialize the socket connection
+const socket = io(BACKEND_URL);
 
 socket.on(
 

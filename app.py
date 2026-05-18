@@ -41,14 +41,9 @@ def clean_stock_symbol(stock):
 # ---------------- APP ----------------
 app = Flask(__name__)
 
-CORS(app)
-
-socketio = SocketIO(
-
-    app,
-
-    cors_allowed_origins="*"
-)
+# Change these lines at the top of your app.py
+CORS(app, resources={r"/*": {"origins": "*"}})
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='gevent')
 
 # ---------------- DATABASE ----------------
 app.config[
