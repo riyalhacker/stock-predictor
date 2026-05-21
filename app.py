@@ -1896,6 +1896,9 @@ def backtest():
         })
 # ---------------- RUN ----------------
 if __name__ == '__main__':
-    # Render assigns the port via an environment variable
-    port = int(os.environ.get("PORT", 5000)) 
+    import os
+    # 1. Look for the dynamic port given by Render, fallback to 5000 locally
+    port = int(os.environ.get("PORT", 5000))
+    
+    # 2. Use socketio.run instead of app.run so live stock tickers work over the cloud
     socketio.run(app, host='0.0.0.0', port=port)
