@@ -547,9 +547,10 @@
 let chart;
 
 // ---------------- SOCKET ----------------
-const socket = io(
-  " https://stock-predictor1-0jp0.onrender.com"
-);
+const socket = io("https://stock-predictor1-0jp0.onrender.com", {
+  transports: ['websocket', 'polling'],
+  withCredentials: true
+});
 
 socket.on(
 
